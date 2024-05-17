@@ -2,24 +2,224 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "roboto", sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "header nav"
+        "filtro filtro"
+        "main main"
+        "footer footer";
 }
 
 
+/* BARRA PRINCIPAL */
+
+header {
+    display: grid;
+    grid-area: header;
+    background-color: #000000;
+    color: #d4a628;
+}
+
+.logo{
+    font-family: "oswald", sans-serif;
+    font-size: 3rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    align-items: center;
+    display: flex;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.material-symbols-outlined{
+    color: #beb7a4;
+}
+
+.nav-bar{
+    display: grid;
+    grid-area: nav;
+    justify-content: center;
+    background-color: #000000;
+}
+
+aside{
+    display: none;
+}
+
+/* FILTROS */
+
+.filtro{
+    display: grid;
+    grid-area: filtro;
+    background-color: #e8e5dc;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+}
 
 
+/* PRINCIPAL */
+/* CARDS */
+main{
+    display: grid;
+    grid-area: main;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    min-height: 100vh;
+}
+
+.cards{
+    border: solid 1px;
+    border-color: #e6dcdc;
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+
+}
+
+img{
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.cards p{
+    padding: 0.3rem;
+    color: #534f45;
+}
+
+button{
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: #d8c799;
+    border-radius: 10%;
+}
 
 
+/* PAGINACION */
+
+.paginacion{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    }
+
+li{
+    display: flex;
+    border: solid 0.5px;
+    border-color: #e6dcdc;
+    padding: 0.5rem;
+}
+
+.numeros{
+    display: flex;
+    margin: 2 rem;
+    
+}
+
+/* FOOTER */
+
+footer{
+    display: grid;
+    grid-area: footer;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.redes{
+
+    justify-content: center;
+    text-align: center;
+}
+
+i{
+    color: #beb7a4;
+    padding: 0.5rem;
+}
 
 
+/* QUERYS */
 
-
-
-/* @media (min-width: 768px){    
-    div {
+@media (min-width: 576px){
+    body{
         display: grid;
-        border: 1px solid black;
-        grid-template-columns: 6rem 1fr;
+        grid-template-columns: 15rem 1.5fr ;
         grid-template-areas:
-        "menu seccion-principal"
-        "menu seccion-principal"
-        "menu pie-de-pagina"; */
+            "header filtro"
+            "menu main"
+            "footer main"
+            
+    }
+
+    nav{
+        background-color: #000000;
+        color: #d4a628;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .logo{
+        font-family: "oswald", sans-serif;
+        font-size: 2rem;
+        padding: 1rem;
+        align-items: center;
+        display: flex;
+    }
+    
+    
+    .nav-bar{
+        display: grid;
+        grid-area: menu;
+    }
+
+    .menu{
+        display: none
+    }
+    
+    aside{
+        display: flex;
+        flex-direction: column;
+        color:#d8c799;
+        text-align: center;
+    }
+
+    aside p{
+        padding: 1rem;
+    }
+    
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;}
+
+
+footer{
+
+    .redes{
+
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+}
