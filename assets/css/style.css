@@ -81,6 +81,14 @@ main{
     min-height: 100vh;
 }
 
+.cards-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .cards{
     border: solid 1px;
     border-color: #e6dcdc;
@@ -206,11 +214,18 @@ i{
     .container{
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2.5rem;}
+        
 
+    .cards-main{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        }
 
 footer{
 
